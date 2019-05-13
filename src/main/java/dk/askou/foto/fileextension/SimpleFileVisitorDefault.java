@@ -20,11 +20,10 @@ public class SimpleFileVisitorDefault extends SimpleFileVisitor {
 
         Path sti = (Path) file;
 //        System.out.println(sti.toString());
-        if (sti.endsWith(".jpg") || sti.endsWith(".xml")) {
-            System.out.println("alæskdfj");
+        if (sti.toString().endsWith(".jpg") || sti.toString().endsWith(".pid")  || sti.toString().endsWith(".ico")) {
+            System.out.println(sti.toString());
         }
-
-        return super.visitFile(file, attrs);
+        return FileVisitResult.CONTINUE;
     }
 
 
